@@ -25,20 +25,20 @@
             <td>{{$post->author}}</td>
             <td>{{$post->category}}</td>
             <td>{{$post->text}}</td>
-            {{-- <td>
-                dettagli
-                <a href="{{route('dresses.show',['dress'=>$dress->id])}}" class="btn btn-info">Dettagli</a>
+            <td>
+                {{-- dettagli --}}
+                <a href="{{route('posts.show',['post'=>$post->id])}}" class="btn btn-info">Leggi</a>
 
-                modifiche
-                <a href="{{route('dresses.edit',['dress'=>$dress->id])}}" class="btn btn-warning">Modifica</a>
+                {{-- modifiche --}}
+                {{-- <a href="{{route('dresses.edit',['dress'=>$dress->id])}}" class="btn btn-warning">Modifica</a> --}}
 
                 {{-- elimina --}}
                 {{-- <form action="{{route('dresses.destroy', ['dress'=>$dress->id])}}" method="post">
                     @csrf
                     @method('DELETE')
                     <button class="btn btn-danger">Elimina</button> 
-                </form>
-            </td> --}}
+                </form> --}}
+            </td>
         </tr>
         @endforeach
 
