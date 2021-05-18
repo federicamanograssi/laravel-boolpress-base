@@ -5,5 +5,5 @@
 @section('content')
     
     <h1> Sono la home</h1>
-    <a href="">Vai alla pagina blog</a>
+    <a href="/posts">Vai alla pagina blog</a>
 @endsection
