@@ -29,7 +29,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        //
+        return view('posts.create');
     }
 
     /**
@@ -40,7 +40,18 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data=$request->all();
+        $newPost = new Post();
+
+        $newPost->title =$data['title'];
+        $newPost->author =$data['author'];
+        $newPost->text =$data['text'];
+        $newPost->category =$data['category'];
+        $newPost->publication_date =$data['publication_date'];
+        $newPost->save();
+
+        $post = Post::orderBy('id', 'desc')->first();
+        return redirect()->route('posts.index', $post);
     }
 
     /**

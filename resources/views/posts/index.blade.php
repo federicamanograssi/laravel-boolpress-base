@@ -2,7 +2,9 @@
 
 @section('pageTitle','Blog')
 @section('content')
-    
+
+<a href="{{route('posts.create')}}" class="btn btn-info">Crea nuovo post</a>
+
 <table class="table">
     {{-- intestazione tabella --}}
     <thead>
