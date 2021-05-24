@@ -81,7 +81,14 @@ class PostController extends Controller
      */
     public function edit(Post $post)
     {
-        //
+        if(!$post){
+            abort(404);
+        };
+
+        $data = [
+            'post'=>$post
+        ];
+        return view('posts.edit',$data);
     }
 
     /**
@@ -93,7 +100,9 @@ class PostController extends Controller
      */
     public function update(Request $request, Post $post)
     {
-        //
+        $data=$request->all();
+        $post->update($data);
+        return redirect()->route('posts.index', $post);
     }
 
     /**

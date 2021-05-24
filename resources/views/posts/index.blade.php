@@ -32,7 +32,7 @@
                 <a href="{{route('posts.show',['post'=>$post->id])}}" class="btn btn-info">Leggi</a>
 
                 {{-- modifiche --}}
-                {{-- <a href="{{route('dresses.edit',['dress'=>$dress->id])}}" class="btn btn-warning">Modifica</a> --}}
+                <a href="{{route('posts.edit',['post'=>$post->id])}}" class="btn btn-warning">Modifica</a>
 
                 {{-- elimina --}}
                 {{-- <form action="{{route('dresses.destroy', ['dress'=>$dress->id])}}" method="post">
