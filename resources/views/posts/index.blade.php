@@ -35,11 +35,11 @@
                 <a href="{{route('posts.edit',['post'=>$post->id])}}" class="btn btn-warning">Modifica</a>
 
                 {{-- elimina --}}
-                {{-- <form action="{{route('dresses.destroy', ['dress'=>$dress->id])}}" method="post">
+                <form action="{{route('posts.destroy', ['post'=>$post->id])}}" method="post">
                     @csrf
                     @method('DELETE')
                     <button class="btn btn-danger">Elimina</button> 
-                </form> --}}
+                </form>
             </td>
         </tr>
         @endforeach
